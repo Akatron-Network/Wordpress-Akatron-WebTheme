@@ -1,0 +1,36 @@
+.menu-col {
+  height: 500px;
+  padding: 20px;
+  box-shadow: -11px 0 19px -18px rgba(0,0,0,0.8) inset;
+}
+
+.content-col {
+  height: 500px;
+  margin-right: 0;
+  padding: 20px;
+  background-color: var(--darkest_jet);
+}
+
+.menu-col .list-group-item{
+  background-color: transparent;
+  border-radius: 0;
+  border-width: 0;
+  color: var(--cultured);
+  transition: .2s;
+}
+
+.menu-col a {
+  text-decoration: none;
+  color: var(--cultured);
+}
+
+
+.menu-col .list-group-item:hover {
+  color: var(--platinium);
+  background-color: var(--jet_light);
+}
+
+.btn-blog {
+  text-decoration: none;
+  color: var(--cultured);
+}

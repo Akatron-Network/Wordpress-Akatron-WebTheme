@@ -1,0 +1,24 @@
+.cat-item {
+  list-style: none;
+  padding: 7px;
+  padding-left: 15px;
+  color: var(--cultured);
+  transition: .2s;
+  font-size: 18px;
+}
+
+.cat-item:hover {
+  color: var(--platinium);
+  background-color: var(--jet_light);
+}
+
+
+.cat-item a {
+  text-decoration: none;
+  color: var(--cultured);
+}
+
+
+.cat-item a:hover {
+  color: var(--platinium);
+}

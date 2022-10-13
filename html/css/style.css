@@ -1,0 +1,491 @@
+:root {
+/* -- Main Greens */
+    --green_pantone: #14B85B;
+    --sea_green: #20834B;
+    --cadmium_green: #1A6C3D;
+    --shadow_green: #1a6c3d66;
+    --cadmium_green_tra: #1a6c3e54;
+
+/* -- Dark Colors */
+    --modal_back: #0C0C0CBF;
+    --black_light: #151515;
+    --side_black: #181818;
+    --middle_black: #1B1B1B;
+    --earie_black: #1F1F1F;
+    --darkest_jet: #202020;
+    --darker_jet: #232323;
+    --jet_shadow: #292929d4;
+    --jet: #292929;
+    --jet_mid: #2E2E2E;
+    --jet_glass: #2e2e2e6b;
+    --jet_light: #333333;
+    --hr_gray: #4950573d;
+    --onyx: #3D3D3D;
+    --onyx_middle: #606060;
+    --onyx_light: #767676;
+
+/* -- Light Colors */
+    --graysix: #858585;
+    --grayXgray: #B9B9B9;
+    --platinium: #EBEBEB;
+    --cultured: #b9b9b9;
+
+/* -- Other Colors */
+    --danger: #631E24;
+    --danger_light: #861E27;
+    --like_trans: #1b151545;
+    --none_opacity: #0000009e;
+}
+
+body {
+  background-color: var(--black_light);
+  background-size: auto;
+  font-family: "Montserrat", sans-serif;
+  color: var(--platinium);
+}
+
+.navbar {
+  background: rgb(34,34,34);
+  background: linear-gradient(0deg, rgba(34,34,34,0) 10%, rgb(21, 21, 21) 70%);
+  color: var(--cultured);
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-family: "Allerta Stencil", sans-serif;
+  color: var(--platinium);
+  transition: .2s;
+}
+
+.alt-brand {
+  font-family: "Montserrat", sans-serif;
+  color: var(--cultured);
+  font-size: 17px;
+  padding-right: 15px;
+}
+
+
+.navbar-brand:hover {
+  color: var(--cultured);
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: var(--cultured);
+}
+
+.nav-link:hover {
+  color: var(--platinium);
+}
+
+.nav-link.active {
+  color: var(--platinium) !important;
+}
+
+.btn {
+  border-radius: 1px;
+}
+
+
+.btn-github {
+  color: var(--platinium);
+}
+
+.btn-github i {
+  font-size: 25px;
+}
+
+.btn-github span {
+  top: -4px;
+  left: 5px;
+  position: relative;
+}
+
+.col-category {
+  width: 190px;
+  height: 170px;
+  padding: 20px;
+
+}
+
+.btn-category {
+  color: var(--platinium);
+  background-color: var(--jet_glass);
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  transition: .4s;
+  box-shadow: 1px 5px 14px 4px rgba(0,0,0,0.1);
+}
+
+.btn-category:hover {
+  color: var(--platinium);
+  background-color: var(--jet_glass);
+  transform: scale(1.02);
+}
+
+.btn-category i {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+
+.divider {
+  background-size: 300% 300%;
+  background-image: linear-gradient(-45deg, 
+    rgba(128, 32, 123, 0.5) 0%, 
+    rgba(28, 155, 83, 0.5)25%, 
+    rgba(25, 214, 182, 0.5) 51%, 
+    rgba(24, 188, 27, 0.5) 100%);
+  animation: AnimateBG 20s ease infinite;
+  height: 100px;
+}
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+ }
+  50% {
+    background-position: 100% 50%;
+ }
+  100% {
+    background-position: 0% 50%;
+ }
+}
+
+
+
+.comp-bg {
+  background-color: #2b2b2ba1; 
+  background-image: url('/img/computer-bg.png'); 
+  background-size: cover; 
+  min-height: 600px;
+  box-shadow: 1px 5px 20px 4px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.comp-col {
+  min-height: 600px; 
+  position: relative;
+  padding: 0;
+}
+
+.comp-title {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 30px;
+  width: 100%;
+  background-color: var(--sea_green);
+  box-shadow: 1px 5px 14px 4px rgba(0,0,0,0.1);
+}
+
+.comp-title h2 {
+  font-family: "Allerta Stencil", sans-serif;
+  color: var(--platinium);
+}
+
+.comp-title h3 {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.comp-title p {
+  font-size: 16px;
+}
+
+
+.api-bg {
+  background-color: var(--middle_black);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-bottom: 30px;
+  box-shadow: 1px 5px 20px 4px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.form-control {
+  border-radius: 1px;
+  background-color: var(--platinium);
+  border-color: var(--graysix);
+}
+
+.form-select {
+  border-radius: 1px;
+  background-color: var(--platinium);
+  border-color: var(--graysix);
+}
+
+
+.aca-heading {
+  visibility: hidden;
+}
+
+.aca-card {
+  padding: 20px;
+  padding-bottom: 40px;
+  background-color: var(--cadmium_green);
+  box-shadow: 1px 5px 20px 4px rgba(0,0,0,0.5);
+  margin: 10px;
+  position: relative;
+  z-index: 11;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.aca-card:hover {
+  transform: scale(1.1);
+  z-index: 99;
+}
+
+.aca-post  {
+  position: absolute;
+  font-size: 120px;
+  color: var(--sea_green);
+  bottom: -80px;
+  right: 10px;
+}
+
+.aca-card p {
+  color: var(--cultured);
+  text-align: justify;
+  transition: .4s;
+}
+
+.aca-card p:hover {
+  color: var(--platinium);
+}
+
+.aca-card a {
+  text-decoration: none;
+  color: var(--platinium);
+  transition: .2s;
+}
+
+.aca-card a:hover {
+  color: var(--cultured);
+}
+
+.aca-card h2 {
+  font-size: 20px;
+  font-family: "Allerta Stencil", sans-serif;
+  margin-bottom: 15px;
+}
+
+
+.aca-footer {
+  text-align: right;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.aca-footer a {
+  text-decoration: none;
+  color: var(--grayXgray);
+  font-weight: bold;
+  transition: .2s;
+}
+
+.aca-footer a:hover {
+  color: var(--platinium);
+}
+
+.aca-show {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.aca-show a {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--cultured);
+  transition: .2s;
+}
+
+.aca-show a:hover {
+  color: var(--platinium);
+}
+
+.ref-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.ref-header h2 {
+  font-family: "Allerta Stencil", sans-serif;
+  font-size: 35px;
+}
+
+.ref-col {
+  height: 100px;
+  max-height: 100px;
+  min-height: 100px;
+  margin: 0 50px;
+  width: 100px;
+  max-width: 100px;
+  min-width: 100px;
+}
+
+.ref-col img {
+  filter: grayscale(100%);
+  width: 100%; 
+  opacity: 0.5;
+  transition: .5s;
+}
+
+.ref-col img:hover {
+  opacity: 1;
+  filter: grayscale(10%);
+}
+
+
+.footer {
+  background-image: url('/img/bg-texture.png');
+  padding: 50px 20px; 
+  background-color: var(--jet_glass);
+  box-shadow: 1px 5px 20px 4px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.footer h1 {
+  font-family: "Allerta Stencil", sans-serif;
+  padding-top: 10px;
+  font-size: 40px;
+}
+
+.footer h1 span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+
+.footer h2 {
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-link {
+  padding: 10px;
+}
+
+.footer-link a {
+  color: var(--platinium);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-social {
+  font-size: 35px;
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  color: var(--platinium);
+}
+
+.navbar-toggler {
+  color: var(--platinium);
+  border-width: 0;
+  border-radius: 1px;
+}
+
+.navbar-mobile-bg {
+  background-color: var(--side_black);
+}
+
+
+
+.stage {
+  background-image: url('/img/bg-texture.png');
+  padding: 150px 20px; 
+  background-color: var(--jet_glass);
+  box-shadow: 1px 5px 20px 4px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 11;
+}
+
+.stage h1 {
+  font-size: 30px;
+  color: var(--platinium);
+}
+
+.stage p {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: var(--grayXgray);
+}
+
+
+.btn-stage {
+  padding: 10px 25px;
+  margin-top: 10px;
+  background-color: var(--green_pantone);
+  color: var(--darker_jet);
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.btn-stage:hover {
+  background-color: var(--sea_green);
+  transform: translateX(-5px);
+  padding: 10px 30px;
+  color: var(--platinium);
+}
+
+.stage-r {
+  position: relative;
+  min-height: 400px;
+}
+
+.stage-r img {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .5s;
+}
+
+.stage-r img:hover {
+  transform: translateY(-50%) scale(1.02);
+}
+
+.op-so {
+  padding: 60px 20px; 
+  background-color: var(--jet_glass);
+  background-image: url('/img/open-source-bg.png');
+  background-size: inherit;
+  background-repeat: no-repeat;
+  background-position: calc(50% + 500px);
+  box-shadow: 1px 5px 14px 4px rgba(0,0,0,0.8);
+}
+
+.op-so h2 {
+  font-family: "Allerta Stencil", sans-serif;
+  color: var(--platinium);
+}
+
+.op-so p {
+  width: calc(50% + 200px);
+  color: var(--grayXgray);
+}
+
+.op-so a {
+  color: var(--sea_green)
+}
+
+.akt-bg {
+  background-image: url('/img/akt-3d-transp.png');
+}
+
+.akt-bg h2 {
+  color: var(--sea_green);
+  font-size: 35px;
+}

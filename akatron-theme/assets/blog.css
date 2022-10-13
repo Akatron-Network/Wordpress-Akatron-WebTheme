@@ -1,0 +1,94 @@
+.menu-col {
+  padding: 20px;
+  box-shadow: -11px 0 19px -18px rgba(0,0,0,0.8) inset;
+}
+
+.content-col {
+  margin-right: 0;
+  padding: 20px;
+  background-color: var(--darkest_jet);
+}
+
+.content-col img {
+  max-width: 100%;
+}
+
+.menu-col .list-group-item{
+  background-color: transparent;
+  border-radius: 0;
+  border-width: 0;
+  color: var(--cultured);
+  transition: .2s;
+}
+
+.menu-col a {
+  text-decoration: none;
+  color: var(--cultured);
+}
+
+
+.menu-col .list-group-item:hover {
+  color: var(--platinium);
+  background-color: var(--jet_light);
+}
+
+
+.btn-blog {
+  text-decoration: none;
+  color: var(--cultured);
+}
+
+.wp-block-image {
+  text-align: center;
+  margin: 10px;
+}
+
+.wp-block-quote {
+  padding: 0 10px;
+  padding-left: 20px;
+  border-left-width: 2px;
+  border-left-style: double;
+  color: var(--cultured);
+}
+
+.sticky-top {
+  top: 80px;
+  transition: .3s;
+}
+
+
+.content-author {
+  color: var(--cultured);
+  font-size: 20px;
+  font-style: italic;
+}
+
+.content-time {
+  font-size: 15px;
+  text-align: right;
+}
+
+.side-dots {
+  display: none;
+  color: var(--cultured);
+}
+
+@media screen and (max-width: 1150px) {
+  .academy-stage-text {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .aca-stage-r {
+    min-height: 270px !important;
+  }
+
+  .side-collapse {
+    height: 50px;
+    overflow: hidden;
+  }
+
+  .side-collapse .side-dots {
+    display: inline;
+  }
+}
