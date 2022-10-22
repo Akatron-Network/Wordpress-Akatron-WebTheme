@@ -2,7 +2,7 @@
 
 <div class="container-fluid stage">
   <div class="row justify-content-md-center">
-    <div class="col-xl-5 col-lg-6 col-md-12" style="text-align: left; padding: 20px; background-image: url('/img/akt-3d-bg.png'); background-repeat: no-repeat; background-size: contain; background-position: left;">
+    <div class="col-xl-5 col-lg-6 col-md-12" style="text-align: left; padding: 20px; background-image: url('/wp-content/themes/akatron-theme/assets/img/akt-3d-bg.png'); background-repeat: no-repeat; background-size: contain; background-position: left;">
       <div  style="text-align: left;">
         <img src="<?php echo get_template_directory_uri().'/assets'; ?>/img/debi-icon.png" alt="debi" style="width: 200px; margin-bottom: 5px;">
         <h1>Yönetim Asistanınız</h1>

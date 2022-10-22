@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php
+    if ($_SERVER['REQUEST_URI'] == "/" || str_starts_with($_SERVER['REQUEST_URI'], '/category/')) {
+      echo '<meta name="description" content="Akatron Yazılım. Cloud Saas projeleri ile veri analizi başta olmak üzere bir çok sektörde uygulamalar geliştirmekteyiz." />';
+      echo '<meta name="contact" content="info@akatron.net" />';
+      echo '<meta name="keywords" content="akatron, network, net, debi, cankaya, konak, izmir, turkiye, yazılım geliştirme, saas, cloud" />';
+    }
+  ?>
+  
   <title><?php wp_title(''); ?></title>
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
