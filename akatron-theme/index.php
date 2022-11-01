@@ -10,7 +10,7 @@
       <div>
         <p>Debi, bilinçli kararlar verebilmeniz için verilerinizi görselleştirmenizi sağlar.</p>
         <p>Kullanımı herhangi bir nitelik ve bilgi gerektirmez!</p>
-        <button type="button" class="btn btn-stage">İncele</button>
+        <a href="https://debi.akatron.net/" type="button" class="btn btn-stage">İncele</a>
       </div>
     </div>
     <div class="col-lg-6 col-md-12 stage-r">

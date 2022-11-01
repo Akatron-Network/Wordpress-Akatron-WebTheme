@@ -43,7 +43,7 @@
         <div class="row justify-content-around">
           
           <div class="col-xl-6 col-md-12 footer-link">
-            <a href="">Debi</a>
+            <a href="https://debi.akatron.net/">Debi</a>
           </div>
           
           <div class="col-xl-6 col-md-12 footer-link">
