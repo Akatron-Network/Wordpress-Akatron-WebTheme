@@ -17,23 +17,23 @@
         <div class="row justify-content-start" style="margin-top: 50px">
           
           <div class="footer-social">
-            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/company/akatron-network" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
           
           <div class="footer-social">
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://twitter.com/AkatronNW" target="_blank"><i class="fa-brands fa-twitter"></i></a>
           </div>
           
           <div class="footer-social">
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100086773417806" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
           
           <div class="footer-social">
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/akatronnet/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
           </div>
           
           <div class="footer-social">
-            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/Akatron-Network" target="_blank"><i class="fa-brands fa-github"></i></a>
           </div>
 
         </div>
