@@ -1,5 +1,46 @@
 <?php get_header(); ?>
 
+
+<?php
+
+if (!empty($_POST)) {
+  try {
+    $dt = new DateTime("now", new DateTimeZone('Europe/Istanbul'));
+    $context = "<table style='min-width: 500px;'>" .
+      "<tr> <th style='text-align: left;'>Name:</th> <td>" . htmlspecialchars($_POST["Name"]) . "</td> </tr>" . 
+      "<tr> <th style='text-align: left;'>Mail: </th> <td>" . htmlspecialchars($_POST["Mail"]) . "</td> </tr>" . 
+      "<tr> <th style='text-align: left;'>Phone: </th> <td>" . htmlspecialchars($_POST["Phone"]) . "</td> </tr>" . 
+      "<tr> <th style='text-align: left;'>Content: </th> <td>" . htmlspecialchars($_POST["Message"]) . "</td> </tr><tr></tr>" . 
+      "<tr> <th style='text-align: left;'>Date: </th> <td>" . $dt->format('d/m/Y, H:i:s') . "</td> </tr>" . 
+      "<tr> <th style='text-align: left;'>HTTP_X_FORWARD: </th> <td>" . $_SERVER['HTTP_X_FORWARDED_FOR'] . "</td> </tr>" .
+      "<tr> <th style='text-align: left;'>REMOTE_ADDR: </th> <td>" . $_SERVER['REMOTE_ADDR'] . "</td> </tr>" .
+      "<tr> <th style='text-align: left;'>Type: </th> <td>" . $_POST["Type"] . "</td> </tr></table>";
+    
+    $subj = 'Akatron Fast Contact: '. htmlspecialchars($_POST["Name"]);
+
+    $ans = wp_mail('info@akatron.net', $subj, $context, array('Content-Type: text/html; charset=UTF-8'));
+    if (!$ans) {
+      $errorMessage = '<span style="color: red;">Talep gönderilemedi!</span>';
+    }
+    else {
+      $successMessage = '<span style="color: var(--green_pantone); text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);">Talebiniz alındı!</span>';
+    }
+  }catch (Exception $e) {
+    $errorMessage = $e->getMessage();
+  }
+
+  if (htmlspecialchars($_POST["Type"]) == "debi-contact") {
+    echo '<script type="text/javascript"> ' .
+      '   document.getElementById("nav").remove(); ' .
+      '   window.location.href="http://www.debi.akatron.net"; ' .
+      ' </script> ';
+    exit();
+  }
+
+}
+
+?>
+
 <div class="container-fluid stage">
   <div class="row justify-content-md-center">
     <div class="col-xl-5 col-lg-6 col-md-12" style="text-align: left; padding: 20px; background-image: url('/wp-content/themes/akatron-theme/assets/img/akt-3d-bg.png'); background-repeat: no-repeat; background-size: contain; background-position: left;">
@@ -121,31 +162,31 @@
 
 <div class="divider"></div>
 
-<div class="container-fluid op-so akt-bg">
+<div id="bize-ulasin" class="container-fluid op-so akt-bg">
   <div class="container">
     <h2>Bize Ulaşın!</h2>
-    <form class="row row-cols-lg-auto g-3 align-items-center">
+    <form action="/#bize-ulasin" method="post" class="row row-cols-lg-auto g-3 align-items-center">
       <div class="col-12">
         <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
         <div class="input-group">
-          <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="İsminiz">
+          <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="İsminiz" name="Name">
         </div>
       </div>
 
       <div class="col-12">
         <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
         <div class="input-group">
-          <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Mail Adresiniz">
+          <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Mail Adresiniz" name="Mail">
         </div>
       </div>
     
       <div class="col-12">
         <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-        <select class="form-select" id="inlineFormSelectPref">
+        <select class="form-select" id="inlineFormSelectPref" name="Message">
           <option selected disabled>İletişim Sebebi</option>
-          <option value="1">Genel Bilgi</option>
-          <option value="2">Bayilik</option>
-          <option value="3">Kariyer/İşe Alım</option>
+          <option value="Genel Bilgi">Genel Bilgi</option>
+          <option value="Bayilik">Bayilik</option>
+          <option value="Kariyer/İşe Alım">Kariyer/İşe Alım</option>
         </select>
       </div>
     
@@ -153,6 +194,11 @@
         <button type="submit" class="btn btn-success">Gönder</button>
       </div>
     </form>
+    
+    <p style="font-size: 25px;">
+      <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
+      <?php echo((!empty($successMessage)) ? $successMessage : '') ?>
+    </p>
   </div>
 </div>
 

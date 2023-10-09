@@ -1,41 +1,37 @@
 <?php get_header(); ?>
 
-<div class="container-fluid stage" style="padding: 30px 20px;">
-  <div class="row justify-content-md-center">
-    <div class="col-lg-5 col-md-12 academy-stage-text" style="text-align: left; padding: 60px; background-image: url('/img/akt-3d-bg.png'); background-repeat: no-repeat; background-size: contain; background-position: left;">
-      <div  style="text-align: left;">
-        <h1 style="font-size: 40px; font-family: 'Allerta Stencil', sans-serif;">AKATRON <span style="font-family: 'Montserrat', sans-serif; font-size: 30px;">AKADEMİ</span></h1>
-        <br>
-      </div>
-      <div>
-        <p>Akademi bloğu ile ekibimiz tarafından paylaşılan yazılara ulaşabilir, sorular sorabilir ve kaynaklara erişebilirsiniz!</p>
-        <p>Genel yazılım konuları, Akatron platformları ve birçok konuyu kapsamaktadır.</p>
-      </div>
-    </div>
-    <div class="col-lg-5 col-md-12 aca-stage-r">
-      <img src="<?php echo get_template_directory_uri().'/assets'; ?>/img/akt-academy.png" alt="akatron akademi blog">
-    </div>
-  </div>
-</div>
+<?php
 
-<div class="divider" style="box-shadow: 1px -12px 12px -3px rgba(0,0,0,0.5) inset;"></div>
+if (!empty($_POST)) {
+  try {
+    $dt = new DateTime("now", new DateTimeZone('Europe/Istanbul'));
+    $context = "<table style='min-width: 500px;'>" .
+      "<tr> <th style='text-align: left;'>Name:</th> <td>" . htmlspecialchars($_POST["Name"]) . "</td> </tr>" . 
+      "<tr> <th style='text-align: left;'>Surname: </th> <td>" . htmlspecialchars($_POST["Surname"]) . "</td> </tr>" .
+      "<tr> <th style='text-align: left;'>Mail: </th> <td>" . htmlspecialchars($_POST["Mail"]) . "</td> </tr>" . 
+      "<tr> <th style='text-align: left;'>Phone: </th> <td>" . htmlspecialchars($_POST["Phone"]) . "</td> </tr>" . 
+      "<tr> <th style='text-align: left;'>Content: </th> <td>" . htmlspecialchars($_POST["Message"]) . "</td> </tr><tr></tr>" . 
+      "<tr> <th style='text-align: left;'>Date: </th> <td>" . $dt->format('d/m/Y, H:i:s') . "</td> </tr>" . 
+      "<tr> <th style='text-align: left;'>HTTP_X_FORWARD: </th> <td>" . $_SERVER['HTTP_X_FORWARDED_FOR'] . "</td> </tr>" .
+      "<tr> <th style='text-align: left;'>REMOTE_ADDR: </th> <td>" . $_SERVER['REMOTE_ADDR'] . "</td> </tr></table>";
+    
+    $subj = 'Akatron Contact: '. htmlspecialchars($_POST["Name"]) .' '. htmlspecialchars($_POST["Surname"]);
 
-<div class="container-xxl" style="margin-top: 5px; margin-bottom: 50px">
-  <div class="row">
+    $ans = wp_mail('info@akatron.net', $subj, $context, array('Content-Type: text/html; charset=UTF-8'));
+    if (!$ans) {
+      $errorMessage = '<span style="color: red;">Talep gönderilemedi!</span>';
+    }
+    else {
+      $successMessage = '<span style="color: var(--green_pantone); text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);">Talebiniz alındı!</span>';
+    }
+  }catch (Exception $e) {
+    $errorMessage = $e->getMessage();
+  }
+}
 
-    <div class="col-md-4 col-sm-12 menu-col">
-      <?php get_sidebar(); ?>
-    </div>
+?>
 
-    <div class="col-md-8 col-sm-12 content-col">
-    <?php while(have_posts()) : the_post(); ?>
-      <h2><?php the_title(); ?></h2>
-      <hr>
-      <p><?php the_excerpt(); ?></p>
-    <?php endwhile; ?> 
-    </div>
 
-  </div>
-</div>
+<?php the_content(); ?>
 
 <?php get_footer(); ?>

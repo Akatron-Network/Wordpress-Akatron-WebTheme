@@ -44,7 +44,7 @@
           <a class="nav-link" href="/category/academy/">Akademi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">İletişim</a>
+          <a class="nav-link" href="/iletisim/">İletişim</a>
         </li>
       </ul>
 

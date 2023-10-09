@@ -1,5 +1,3 @@
-
-
 :root {
   /* -- Main Greens */
       --green_pantone: #14B85B;
@@ -569,3 +567,91 @@
     color: var(--sea_green);
     font-size: 35px;
   }
+
+  
+
+.contact-outer {
+  background: linear-gradient(173deg, rgba(3,31,15,0.5) 18%, rgba(20,64,38,0.5) 73%);
+}
+
+.contact-container {
+  padding-top: 150px;
+  padding-bottom: 200px;
+}
+
+.contact-left {
+  background-size: 300% 300%;
+  background-image: linear-gradient(-45deg, 
+    rgba(128, 32, 123, 0.3) 0%, 
+    rgba(28, 155, 83, 0.3)25%, 
+    rgba(25, 214, 182, 0.3) 51%, 
+    rgba(24, 188, 27, 0.3) 100%);
+  background-color: var(--black_light);
+  animation: AnimateBG 20s ease infinite;
+  padding: 100px 60px;
+  /* border-radius: 5px; */
+  position: relative;
+  box-shadow: 1px 5px 50px 10px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.contact-left-bg {
+  position: absolute;
+  bottom: -20%;
+  right: 50%;
+  transform: translateX(50%);
+  width: 120%;
+  filter: grayscale(100%) blur(10px) brightness(0);
+}
+
+
+.contact-right {
+  background-color: var(--darkest_jet);
+  box-shadow: 1px 5px 50px 10px rgba(0,0,0,0.3);
+  position: relative;
+  min-height: 500px;
+}
+
+
+.contact-right-form {
+  padding: 30px;
+  padding-right: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+
+.contact-right-form .form-control {
+  background-color: var(--jet_glass);
+  border-width: 0;
+  color: var(--platinium);
+  transition: .2s;
+}
+
+.contact-right-form .form-control:focus {
+  background-color: var(--jet_mid);
+  box-shadow: none;
+}
+
+
+
+
+.company-outer {
+  padding-bottom: 200px;
+  padding-top: 100px;
+  background-color: var(--jet_shadow);
+}
+
+.company-left {
+  padding: 30px;
+}
+
+.company-vision h2 {
+  margin-top: 50px
+}
+
+.company-vision p {
+  text-align: justify;
+  font-size: 18px;
+}

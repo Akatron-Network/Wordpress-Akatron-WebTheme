@@ -51,11 +51,11 @@
           </div>
           
           <div class="col-xl-6 col-md-12 footer-link">
-            <a href="">İletişim</a>
+            <a href="/iletisim/">İletişim</a>
           </div>
           
           <div class="col-xl-6 col-md-12 footer-link">
-            <a href="">Kurumsal</a>
+            <a href="/kurumsal/">Kurumsal</a>
           </div>
 
         </div>
@@ -65,7 +65,7 @@
           <h2>
             Size en uygun çözümü bulamadınız mı?
             <br><br>
-            <button type="button" class="btn btn-success">İletişime Geçin</button>
+            <a href="/iletisim/" type="button" class="btn btn-success">İletişime Geçin</a>
           </h2>
         </div>
 
