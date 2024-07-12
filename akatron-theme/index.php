@@ -43,19 +43,18 @@ if (!empty($_POST)) {
 
 <div class="container-fluid stage">
   <div class="row justify-content-md-center">
-    <div class="col-xl-5 col-lg-6 col-md-12" style="text-align: left; padding: 20px; background-image: url('/wp-content/themes/akatron-theme/assets/img/akt-3d-bg.png'); background-repeat: no-repeat; background-size: contain; background-position: left;">
+    <div class="col-xl-5 col-lg-6 col-md-12" style="text-align: left; padding: 100px 20px; background-image: url('/wp-content/themes/akatron-theme/assets/img/akt-3d-bg.png'); background-repeat: no-repeat; background-size: contain; background-position: left;">
       <div  style="text-align: left;">
         <img src="<?php echo get_template_directory_uri().'/assets'; ?>/img/debi-icon.png" alt="debi" style="width: 200px; margin-bottom: 5px;">
         <h1>Yönetim Asistanınız</h1>
       </div>
       <div>
-        <p>Debi, bilinçli kararlar verebilmeniz için verilerinizi görselleştirmenizi sağlar.</p>
-        <p>Kullanımı herhangi bir nitelik ve bilgi gerektirmez!</p>
+        <p>DEBI her yerden her an erişebileceğiniz, dosyalarınız, verileriniz, mailleriniz ve kullandığınız tüm uygulamalara hakim bir yapay zeka asistanıdır.</p>
         <a href="https://debi.akatron.net/" type="button" class="btn btn-stage">İncele</a>
       </div>
     </div>
     <div class="col-lg-6 col-md-12 stage-r">
-      <img src="<?php echo get_template_directory_uri().'/assets'; ?>/img/debi-desktop.png" alt="debi-desktop">
+      <img src="<?php echo get_template_directory_uri().'/assets'; ?>/img/debi-desktop.png" alt="debi-desktop" style="max-height: 100%;">
     </div>
   </div>
 </div>
